@@ -28,6 +28,7 @@ import sys
 # De-facto standard solution for Python packaging.
 from setuptools import find_packages, setup
 
+from pip._internal.req import parse_requirements
 
 def get_contents(*args):
     """Get the contents of a file relative to the source distribution directory."""
@@ -106,8 +107,7 @@ setup(
     entry_points=dict(console_scripts=[
         'py2deb = py2deb.cli:main',
     ]),
-    install_requires=get_install_requires(),
-    extras_require=get_extras_require(),
+    install_reqs = parse_requirements('requirements.txt',session='hack'),
     test_suite='py2deb.tests',
     include_package_data=True,
     classifiers=[
