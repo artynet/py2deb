@@ -1,10 +1,10 @@
 # Installation requirements.
 
-coloredlogs >= 0.5
-deb-pkg-tools >= 5.2
-executor >= 21.0
-humanfriendly >= 4.4
-pip-accel >= 0.25
-pkginfo >= 1.1
-property-manager >= 2.3.1
-six >= 1.6.1
+coloredlogs
+deb-pkg-tools
+executor
+humanfriendly
+pkginfo
+property-manager
+six
+-e git+https://github.com/paylogic/pip-accel.git@pip-8.1-upgrade#egg=pip-accel
